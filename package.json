@@ -4,8 +4,11 @@
   "description": "Food and ingrediet tracker",
   "main": "server.js",
   "scripts": {
+    "client-install": "npm install --prefix frontend",
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\""
   },
   "repository": {
     "type": "git",
@@ -19,7 +22,9 @@
   "homepage": "https://github.com/mleblancUML/Whats-in-My-Fridge#readme",
   "dependencies": {
     "concurrently": "^5.2.0",
+    "create-react-app": "^3.4.1",
     "express": "^4.17.1",
-    "mongoose": "^5.9.16"
+    "mongoose": "^5.9.16",
+    "nodemon": "^2.0.4"
   }
 }
