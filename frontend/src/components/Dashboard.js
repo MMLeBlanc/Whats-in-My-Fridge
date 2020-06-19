@@ -2,6 +2,14 @@ import React, { Component } from "react";
 import { Jumbotron, Button, Container } from "reactstrap";
 
 export class Dashboard extends Component {
+  onClickSignUp = () => {
+    console.log("Signing up");
+  };
+
+  onClickLogin = () => {
+    console.log("Logging in User");
+  };
+
   render() {
     return (
       <div>
@@ -16,9 +24,12 @@ export class Dashboard extends Component {
             link below.
           </p>
           <Container style={{ padding: 1 }}>
-            <Button color="success">Sign Up</Button>
-
-            <Button color="primary">Login</Button>
+            <Button color="link" onClick={this.onClickSignUp}>
+              Sign Up
+            </Button>
+            <Button color="link" onClick={this.onClickLogin}>
+              Login
+            </Button>
           </Container>
         </Jumbotron>
       </div>
